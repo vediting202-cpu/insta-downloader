@@ -95,7 +95,20 @@
     <p>Paste any Reel/Video link and download in seconds — free & secure.</p>
     <div class="input-box">
      <input type="text" id="videoLink" placeholder="Paste Instagram or TikTok link here...">
-<button onclick="redirectUser()">Download</button>
+<button onclick="redirectUser()">Download</button> 
+
+<script>
+  function redirectUser() {
+    let link = document.getElementById("videoLink").value;
+    if (link.trim() === "") {
+      alert("Please paste a video link first!");
+      return;
+    }
+    let redirectURL = "https://snapsave.app?url=" + encodeURIComponent(link);
+    window.location.href = redirectURL;
+  }
+</script>
+
 
     </div>
     <small style="color: red;">No login required • Works on mobile & desktop</small>
