@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <!-- SEO Tags -->
   <title>Free Instagram & TikTok Downloader | InstaTik</title>
   <meta name="description" content="Free Instagram & TikTok Downloader - Save Reels, Videos, Photos and Clips in HD quality. No login required, works on all devices.">
@@ -18,7 +19,7 @@
   <meta name="twitter:title" content="Free Instagram & TikTok Downloader | InstaTik">
   <meta name="twitter:description" content="Download Instagram Reels, TikTok Videos and Photos easily and in high quality.">
   <meta name="twitter:image" content="https://your-site-link.com/preview.jpg">
-  
+
   <style>
     body {
       margin: 0;
@@ -93,8 +94,9 @@
     <h1>Instagram & TikTok Downloader</h1>
     <p>Paste any Reel/Video link and download in seconds — free & secure.</p>
     <div class="input-box">
-      <input type="text" placeholder="Paste Instagram or TikTok link here...">
-      <button>Download</button>
+     <input type="text" id="videoLink" placeholder="Paste Instagram or TikTok link here...">
+<button onclick="redirectUser()">Download</button>
+
     </div>
     <small style="color: red;">No login required • Works on mobile & desktop</small>
   </div>
@@ -149,8 +151,18 @@
   <footer>
     © 2025 InstaTik Downloader • Built for education & personal use.
   </footer>
-<script type='text/javascript' src='//pl27482163.profitableratecpm.com/52/12/62/521262720e4c2b86cf05a070844ac4f0.js'></script>
+<script>
+  function redirectUser() {
+    let link = document.getElementById("videoLink").value;
+    if (link.trim() === "") {
+      alert("Please paste a video link first!");
+      return;
+    }
+    // Dusri site ka URL jaha tum redirect karna chahte ho
+    let redirectURL = "https://snapsave.app?url=" + encodeURIComponent(link);
+    window.location.href = redirectURL;
+  }
+</script>
+
 </body>
 </html>
-
-
