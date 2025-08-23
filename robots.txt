@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vediting202-cpu.github.io/insta_downloader/sitemap.xml
